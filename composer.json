@@ -1,0 +1,69 @@
+{
+    "name": "aseqbase/skeleton",
+    "description": "All the main and applicable aseqbase files and folders",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Mohammad Fathi",
+            "email": "i@mimfa.net",
+            "homepage": "https://mfathi.ir",
+            "role": "Lead Developers"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "composer/installers": "^1.12"
+    },
+    "scripts": {
+        "dev:start": [
+            "Composer\\Config::disableProcessTimeout",
+            "MiMFa\\Bootstrap::Start",
+            "@php index.php"
+        ],
+        "dev:install": [
+            "MiMFa\\Bootstrap::Install"
+        ],
+        "dev:uninstall": [
+            "MiMFa\\Bootstrap::Uninstall"
+        ],
+        "dev:update": [
+            "MiMFa\\Bootstrap::Update"
+        ],
+        "post-install-cmd": [
+            "MiMFa\\Bootstrap::Install"
+        ],
+        "post-update-cmd": [
+            "MiMFa\\Bootstrap::Update"
+        ]
+    },
+    "autoload": {
+        "files": [ "-bootstrap/Bootstrap.php" ],
+        "psr-4": {
+            "MiMFa\\": ["model/","-bootstrap/", "../model/","../-bootstrap/"]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "third-party/required-plugin": true,
+            "my-organization/*": true,
+            "unnecessary/plugin": false,
+            "composer/installers": true
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "./": ["type:framework", "type:patch", "type:package"],
+            "{$name}/": ["type:project", "type:directory"],
+            "model/library/": ["type:library"],
+            "model/component/": ["type:component"],
+            "model/module/": ["type:module"],
+            "model/template/": ["type:template"],
+            "view/": ["type:view"],
+            "route/": ["type:route"],
+            "compute/": ["type:compute"],
+            "asset/": ["type:asset"]
+        }
+    }
+}
