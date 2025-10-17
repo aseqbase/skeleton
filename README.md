@@ -1,6 +1,8 @@
 # Skeleton (Project)
 > aseqbase/skeleton
+
 All the main and applicable aseqbase files and folders, to have a complete but blank aseqbase project...
+
 ## Dependencies
 * <a href="http://github.com//aseqbase/aseqbase">aseqbase/aseqbase</a>
 <h2>Managements</h2>
