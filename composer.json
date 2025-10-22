@@ -9,6 +9,14 @@
             "email": "i@mimfa.net",
             "homepage": "https://mfathi.ir",
             "role": "Lead Developers"
+        },
+        {
+            "name": "Martin Fixoni",
+            "role": "Back-end Developer"
+        },
+        {
+            "name": "Jacoob Del Pano",
+            "role": "UI/UX Designer"
         }
     ],
     "minimum-stability": "dev",
@@ -22,17 +30,24 @@
             "Composer\\Config::disableProcessTimeout",
             "MiMFa\\Bootstrap::Start"
         ],
-        "dev:create": [
-            "MiMFa\\Bootstrap::Create"
+        "dev:stop": [
+            "MiMFa\\Bootstrap::Stop"
         ],
         "dev:install": [
             "MiMFa\\Bootstrap::Install"
+        ],
+        "dev:reinstall": [
+            "composer clear-cache && composer require aseqbase/skeleton && composer dev:install"
         ],
         "dev:uninstall": [
             "MiMFa\\Bootstrap::Uninstall"
         ],
         "dev:update": [
+            "composer update aseqbase/skeleton",
             "MiMFa\\Bootstrap::Update"
+        ],
+        "dev:create": [
+            "MiMFa\\Bootstrap::Create"
         ],
         "post-install-cmd": [
             "MiMFa\\Bootstrap::Install"
