@@ -25,7 +25,7 @@ All the main and applicable aseqbase files and folders, to have a complete but b
 		Destination Directory [D:\MyWebsite\]: D:\MyWebsite\skeleton\
 		```
   4. Follow the steps to finish the installation of sources, database, etc.
-  5. [optional] On the local server, create an optional file named `global.php` in the `skeleton` directory  to change your-parent-directory-name (from the `.aseq`) using:
+  5. [optional] On the local server, create an optional file named `global.php` in the `skeleton` directory  to change your-parent-directory-name (from the `aseq`) using:
 		``` bash
 		> composer skeleton:create global --aseq "skeleton" --base "your-parent-directory-name" -f
 		```
@@ -34,7 +34,7 @@ All the main and applicable aseqbase files and folders, to have a complete but b
 		> cd vendor/aseqbase/skeleton
 		vendor/aseqbase/skeleton> composer dev:create global --aseq "skeleton" --base "your-parent-directory-name" -f
 		```
-		**Note**: Do not forget to replace "your-parent-directory-name" with your item (default `.aseq`). 
+		**Note**: Do not forget to replace "your-parent-directory-name" with your item (default `aseq`). 
   6. Enjoy...
 
 <h3>Using</h3>
